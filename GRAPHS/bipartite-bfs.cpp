@@ -2,7 +2,7 @@
 using namespace std;
 
 bool bipartiteBfs(int src, vector<int> adj[], int color[]) {
-    queue<int>q;
+    queue<int> q;
     q.push(src); 
     color[src] = 1; 
     while(!q.empty()) {
@@ -32,6 +32,8 @@ bool checkBipartite(vector<int> adj[], int n) {
     }
     return true; 
 }
+
+
 int main() {
 	int n, m;
 	cin >> n >> m;
