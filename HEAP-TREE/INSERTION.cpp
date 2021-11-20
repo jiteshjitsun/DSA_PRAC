@@ -3,12 +3,12 @@ using namespace std;
 
 #define MAX 1000
 
-void heapify(int arr[],int n, int i) {
+void heapify(int arr[], int i) {
     int parent = (i-1)/2;
     if(arr[parent] > 0) {
         if( arr[i]> arr[parent]){
             swap(arr[i],arr[parent]);
-            heapify(arr,n, parent);
+            heapify(arr, parent);
         }
     }
 }
@@ -22,7 +22,7 @@ void printArray(int arr[],int n) {
 void insertNode(int arr[],int n,int key) {
     n = n+1;
     arr[n-1]=key;
-    heapify(arr,n,n-1);
+    heapify(arr,n-1);
 }
 
 int main() {
@@ -35,6 +35,6 @@ int main() {
 
     insertNode(arr,n,key);
     printArray(arr,n+1);
-
-
 }
+
+
